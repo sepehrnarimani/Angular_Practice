@@ -6,11 +6,33 @@
   "
 >
   <!-- Icon -->
-  <div
-    class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600"
-  >
-  <ng-icon [name]="icon" class="h-6 w-6"></ng-icon>
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+  <div [ngSwitch]="icon">
+    <ng-container *ngSwitchCase="'bolt'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+        <path d="M13 2L3 14h7l-1 8 12-14h-7l-1-6z" />
+      </svg>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'shield'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+        <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>
+        <path d="M9 12l2 2 4-4"/>
+      </svg>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'users'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+        <path d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3z"/>
+        <path d="M8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3z"/>
+        <path d="M3 20c0-3 3-5 5-5"/>
+        <path d="M21 20c0-3-3-5-5-5"/>
+        <path d="M8 15c1-1 2.5-2 4-2s3 1 4 2"/>
+      </svg>
+    </ng-container>
   </div>
+</div>
+
 
   <!-- Title -->
   <h3 class="text-base font-semibold text-gray-900">

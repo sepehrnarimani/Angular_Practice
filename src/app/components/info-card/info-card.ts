@@ -1,14 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { IconType, NgIconComponent } from '@ng-icons/core';
+import { InfoItem } from "../info-item/info-item";
+import { ɵEmptyOutletComponent } from "@angular/router";
 
 @Component({
   selector: 'app-info-card',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [],
   templateUrl: './info-card.html',
 })
 export class InfoCardComponent {
-  @Input({ required: true }) icon!: IconType;
   @Input({ required: true }) title!: string;
-  @Input({ required: true }) description!: string;
 }

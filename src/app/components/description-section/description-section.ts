@@ -11,11 +11,12 @@ import {
   heroUserGroup,
   heroCheckCircle,
 } from '@ng-icons/heroicons/outline';
+import { InfoItem } from "../info-item/info-item";
 
 @Component({
   selector: 'app-description-section',
   standalone: true,
-  imports: [NgFor, StatsCardComponent, InfoCardComponent],
+  imports: [StatsCardComponent, InfoCardComponent, InfoItem],
   templateUrl: './description-section.html',
 })
 export class DescriptionSectionComponent {
@@ -44,17 +45,4 @@ export class DescriptionSectionComponent {
     },
   ];
 
-  trustedTitle = 'Trusted by teams worldwide';
-
-  trustedItems = [
-    'Unlimited team members',
-    'Advanced analytics and reporting',
-    '24/7 priority support',
-    'Custom integrations',
-    '99.9% uptime guarantee',
-    'SOC 2 Type II certified',
-  ];
-
-  // use the same icon for all check items
-  checkIcon = heroCheckCircle;
-}
+  }
