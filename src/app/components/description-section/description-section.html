@@ -1,0 +1,47 @@
+<section class="border-t border-gray-200 bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-24">
+    <!-- Section header -->
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {{ headerTitle }}
+      </h2>
+      <p class="mt-4 text-base text-gray-500">
+        {{ headerSubtitle }}
+      </p>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <app-stats-card
+        *ngFor="let item of featureCards"
+        [icon]="item.icon"
+        [title]="item.title"
+        [description]="item.description"
+      ></app-stats-card>
+    </div>
+
+    <!-- Trusted / checklist area -->
+    <div class="mt-14">
+      <!-- If your InfoCard supports icon/title/description, pass them.
+           If it only supports title/description, remove the [icon] binding. -->
+      <app-info-card
+        [icon]="checkIcon"
+        [title]="trustedTitle"
+        [description]="''"
+      >
+        <!-- If InfoCard does NOT support content projection (<ng-content>),
+             then paste this checklist markup directly into InfoCard's HTML instead. -->
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="flex items-center gap-3 text-sm text-gray-700" *ngFor="let text of trustedItems">
+            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+              <!-- if you prefer icon here, you can also use your own check-icon rendering -->
+              ✓
+            </span>
+            <span>{{ text }}</span>
+          </div>
+        </div>
+      </app-info-card>
+    </div>
+  </div>
+</section>

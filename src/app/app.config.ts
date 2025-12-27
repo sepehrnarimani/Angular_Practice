@@ -1,12 +1,19 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+
+import { provideIcons } from '@ng-icons/core';
+import { heroBolt, heroShieldCheck, heroChartBar } from '@ng-icons/heroicons/outline';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration(withEventReplay())
-  ]
+    provideRouter(routes),
+
+    // Register icons you plan to use
+    provideIcons({
+      heroBolt,
+      heroShieldCheck,
+      heroChartBar,
+    }),
+  ],
 };
