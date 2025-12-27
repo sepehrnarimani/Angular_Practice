@@ -1,15 +1,20 @@
 import { Component, Input } from '@angular/core';
-import { NgStyle } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-primary-button',
   standalone: true,
-  imports: [NgStyle],
   templateUrl: './primary-button.html',
 })
 export class PrimaryButtonComponent {
-  @Input({ required: true }) text!: string;
+  @Input() text = '';
+  @Input() route?: string;
 
-  // default = primary blue from your UI
-  @Input() color: string = '#2563eb';
+  constructor(private router: Router) {}
+
+  navigate() {
+    if (this.route) {
+      this.router.navigateByUrl(this.route);
+    }
+  }
 }
