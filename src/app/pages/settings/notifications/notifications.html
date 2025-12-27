@@ -1,1 +1,85 @@
-<p>notifications works!</p>
+<app-navbar></app-navbar>
+
+<div class="flex min-h-screen">
+  <app-settings-sidebar></app-settings-sidebar>
+
+  <div class="flex-1 p-10">
+    <div class="mx-auto w-full max-w-4xl px-6 py-10">
+        <div class="mx-auto w-full max-w-5xl px-6 py-4">
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm">
+            <!-- Header -->
+            <div class="border-b border-gray-200 px-8 py-6">
+            <h1 class="text-xl font-semibold text-gray-900">Notifications</h1>
+            </div>
+
+            <!-- Body -->
+            <div class="px-8 py-6">
+            <!-- Section: Product Updates -->
+            <h2 class="text-sm font-semibold text-gray-900">Product Updates</h2>
+
+            <div class="mt-4 divide-y divide-gray-200">
+                <app-notification-card
+                title="New features"
+                description="Get notified when we release new features and improvements"
+                [(enabled)]="newFeatures"
+                ></app-notification-card>
+
+                <app-notification-card
+                title="Changelog"
+                description="Weekly digest of product changes and updates"
+                [(enabled)]="changelog"
+                ></app-notification-card>
+
+                <app-notification-card
+                title="Maintenance notifications"
+                description="Alerts about scheduled maintenance and downtime"
+                [(enabled)]="maintenance"
+                ></app-notification-card>
+            </div>
+
+            <!-- Section: Security -->
+            <h2 class="mt-10 text-sm font-semibold text-gray-900">Security</h2>
+
+            <div class="mt-4 divide-y divide-gray-200">
+                <app-notification-card
+                title="Security alerts"
+                description="Important security updates and notifications"
+                [(enabled)]="securityAlerts"
+                ></app-notification-card>
+
+                <app-notification-card
+                title="Login notifications"
+                description="Get notified when someone logs into your account"
+                [(enabled)]="loginNotifications"
+                ></app-notification-card>
+            </div>
+
+            <h2 class="mt-10 text-sm font-semibold text-gray-900">Marketing</h2>
+
+            <div class="mt-4 divide-y divide-gray-200">
+                <app-notification-card
+                title="Newsletter"
+                description="Monthly newsletter with tips, case studies, and news"
+                [(enabled)]="NewsLetter"
+                ></app-notification-card>
+
+                <app-notification-card
+                title="Special offers"
+                description="Exclusive deals and promotional offers"
+                [(enabled)]="specialOffers"
+                ></app-notification-card>
+
+                <app-notification-card
+                title="Events and webinars"
+                description="Invitations to upcoming events and educational content"
+                [(enabled)]="Events"
+                ></app-notification-card>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
