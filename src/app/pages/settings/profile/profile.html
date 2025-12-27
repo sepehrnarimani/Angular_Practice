@@ -1,8 +1,60 @@
 <app-navbar></app-navbar>
+
 <div class="flex min-h-screen">
   <app-settings-sidebar></app-settings-sidebar>
 
   <div class="flex-1 p-10">
-    <p class="text-gray-500">Main content area</p>
+    <div class="mx-auto w-full max-w-4xl px-6 py-10">
+  <div class="rounded-xl border border-gray-200 bg-white shadow-sm">
+    <!-- Header -->
+    <div class="border-b border-gray-200 px-8 py-6">
+      <h1 class="text-xl font-semibold text-gray-900">Profile</h1>
+    </div>
+
+    <!-- Form body -->
+    <div class="px-8 py-6">
+      <form class="space-y-6">
+        <app-profile-entry
+          label="First Name"
+          placeholder="John"
+          value="John"
+        ></app-profile-entry>
+
+        <app-profile-entry
+          label="Last Name"
+          placeholder="Doe"
+          value="Doe"
+        ></app-profile-entry>
+
+        <app-profile-entry
+          label="Email"
+          type="email"
+          placeholder="john.doe@company.com"
+          value="john.doe@company.com"
+        ></app-profile-entry>
+      </form>
+    </div>
+
+    <!-- Footer actions -->
+    <div
+      class="flex items-center justify-end gap-3 border-t border-gray-200 px-8 py-3"
+    >
+      <!-- Cancel -->
+        <button
+        type="button"
+        class= "rounded-lg px-6 py-3 text-base bg-white font-normal text-black border-gray-300 border shadow-sm transition cursor-pointer hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2
+            hover:translate-0.5
+            hover:shadow-md"
+        >
+        Cancel
+        </button>
+
+      <!-- Save -->
+      <app-primary-button text="Save changes"></app-primary-button>
+    </div>
   </div>
 </div>
+  </div>
+</div>
+
+
