@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, output, booleanAttribute, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
 
@@ -9,16 +9,14 @@ import { ToggleSwitchModule } from 'primeng/toggleswitch';
   templateUrl: './notification-card.html',
 })
 export class NotificationCardComponent {
-  @Input({ required: true }) title!: string;
-  @Input({ required: true }) description!: string;
+  title = input.required<string>();
+  description = input.required<string>();
 
-  @Input() enabled = false;
-  @Output() enabledChange = new EventEmitter<boolean>();
-
-  @Input() disabled = false;
+  enabled = model(false);
+  enabledChange = output<boolean>();
 
   onEnabledChange(value: boolean) {
-    this.enabled = value;
+    this.enabled.set(value);
     this.enabledChange.emit(value);
   }
 }
