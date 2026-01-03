@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { InfoItem } from "../info-item/info-item";
 import { ɵEmptyOutletComponent } from "@angular/router";
 
@@ -9,5 +9,5 @@ import { ɵEmptyOutletComponent } from "@angular/router";
   templateUrl: './info-card.html',
 })
 export class InfoCardComponent {
-  @Input({ required: true }) title!: string;
+  title = input.required<string>();
 }

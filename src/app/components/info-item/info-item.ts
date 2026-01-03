@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-info-item',
@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class InfoItem {
 
-  @Input({ required: true }) title!: string;
+  title = input.required<string>();  
   
 }
