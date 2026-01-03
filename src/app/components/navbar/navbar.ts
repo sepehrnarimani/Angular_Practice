@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -7,4 +7,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.html',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+
+  mobileOpen = signal(false);
+
+  toggleMobile() {
+    this.mobileOpen.update(v => !v);
+  }
+
+  closeMobile() {
+    this.mobileOpen.set(false);
+  }
+
+}

@@ -1,21 +1,47 @@
-<aside class="fixed flex-1 h-full w-70 border-r border-gray-200 bg-white px-6 pb-8 pt-24">
-  <h2 class="text-lg font-semibold text-gray-900 pl-4">Settings</h2>
+<aside
+  class="
+    fixed inset-x-0 top-16 z-10
+    flex h-14 items-center
+    border-b border-gray-200 bg-white
+    px-4
+    md:static md:inset-auto md:h-full
+    md:w-64 md:flex-col
+    md:border-b-0 md:border-r
+    md:px-6 md:pt-24
+  "
+>
+  <!-- Title (desktop only) -->
+  <h2 class="hidden md:block text-lg font-semibold text-gray-900 pl-4">
+    Settings
+  </h2>
 
-  <nav class="mt-6 space-y-2">
-    <!-- Profile -->
+  <!-- Navigation -->
+  <nav
+    class="
+      flex w-full items-center justify-around
+      md:mt-6 md:flex-col md:items-stretch md:space-y-2
+    "
+  >
     <a
       routerLink="/settings/profile"
       routerLinkActive="bg-gray-100 text-gray-900"
-      class="block rounded-lg px-2 py-3 text-sm text-gray-700 hover:bg-gray-50"
+      class="
+        rounded-lg px-3 py-2 text-sm text-gray-700
+        hover:bg-gray-50
+        md:block
+      "
     >
       Profile
     </a>
 
-    <!-- Notifications -->
     <a
       routerLink="/settings/notifications"
       routerLinkActive="bg-gray-100 text-gray-900"
-      class="block rounded-lg px-2 py-3 text-sm text-gray-700 hover:bg-gray-50"
+      class="
+        rounded-lg px-3 py-2 text-sm text-gray-700
+        hover:bg-gray-50
+        md:block
+      "
     >
       Notifications
     </a>

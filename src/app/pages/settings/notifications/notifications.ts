@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { NotificationCardComponent } from '../../../components/notification-card/notification-card';
 import { SettingsSidebar } from "../../../components/settings-sidebar/settings-sidebar";
 import { NavbarComponent } from "../../../components/navbar/navbar";
+import { BreakpointObserver } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-notifications-settings',
@@ -20,5 +22,17 @@ export class NotificationsSettingsComponent {
   NewsLetter = false;
   specialOffers = false;
   Events = true;
+
+  private breakpointObserver = inject(BreakpointObserver);
+
+  isException = signal(false);
+
+  constructor() {
+    this.breakpointObserver
+      .observe('(min-width: 768px) and (max-width: 880px)')
+      .subscribe(result => {
+        this.isException.set(result.matches);
+      });
+  }
 
 }
