@@ -10,6 +10,13 @@
 
   <p-toggleswitch
     [ngModel]="enabled()"
-    (ngModelChange)="onEnabledChange($event)" >
+    (ngModelChange)="onEnabledChange($event)"
+    class="
+    [--p-toggleswitch-background:theme(colors.gray.300)]
+    [--p-toggleswitch-checked-background:theme(colors.blue.600)]
+    [--p-toggleswitch-checked-hover-background:theme(colors.blue.700)]
+    [--p-toggleswitch-handle-background:white]
+    "
+    >
   </p-toggleswitch>
 </div>
