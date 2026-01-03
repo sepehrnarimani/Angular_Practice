@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgSwitch, NgSwitchCase } from '@angular/common';
 
 type StatsIcon = 'bolt' | 'shield' | 'users';
@@ -10,7 +10,7 @@ type StatsIcon = 'bolt' | 'shield' | 'users';
   templateUrl: './stats-card.html',
 })
 export class StatsCardComponent {
-  @Input({ required: true }) icon!: StatsIcon;
-  @Input({ required: true }) title!: string;
-  @Input({ required: true }) description!: string;
+  icon = input.required<StatsIcon>();
+  title = input.required<string>();
+  description = input.required<string>();
 }

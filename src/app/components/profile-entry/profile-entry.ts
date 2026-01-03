@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-profile-entry',
@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './profile-entry.css',
 })
 export class ProfileEntry {
-  @Input({ required: true }) label!: string;
-  @Input() placeholder: string = '';
-  @Input() type: 'text' | 'email' = 'text';
-  @Input() value: string = '';
+  label = input.required<string>();
+  placeholder = input('');
+  type = input<'text' | 'email'>('text');
+  value = input('');
 }

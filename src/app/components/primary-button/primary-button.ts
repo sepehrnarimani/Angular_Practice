@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,14 +7,15 @@ import { Router } from '@angular/router';
   templateUrl: './primary-button.html',
 })
 export class PrimaryButtonComponent {
-  @Input() text = '';
-  @Input() route?: string;
+  text = input('');
+  route = input<string | undefined>(undefined);
 
   constructor(private router: Router) {}
 
   navigate() {
-    if (this.route) {
-      this.router.navigateByUrl(this.route);
+    const route = this.route();
+    if (route) {
+      this.router.navigateByUrl(route);
     }
   }
 }
