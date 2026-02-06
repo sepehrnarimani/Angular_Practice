@@ -10,40 +10,42 @@
     md:px-6 md:pt-24
   "
 >
-  <!-- Title (desktop only) -->
-  <h2 class="hidden md:block text-lg font-semibold text-gray-900 pl-4">
-    Settings
-  </h2>
+<div class="fixed w-56">
+    <!-- Title (desktop only) -->
+    <h2 class="hidden md:block text-lg font-semibold text-gray-900 pl-4">
+      Settings
+    </h2>
 
-  <!-- Navigation -->
-  <nav
-    class="
-      flex w-full items-center justify-around
-      md:mt-6 md:flex-col md:items-stretch md:space-y-2
-    "
-  >
-    <a
-      routerLink="/settings/profile"
-      routerLinkActive="bg-gray-100 text-gray-900"
+    <!-- Navigation -->
+    <nav
       class="
-        rounded-lg px-3 py-2 text-sm text-gray-700
-        hover:bg-gray-50
-        md:block
+        flex w-full items-center justify-around
+        md:mt-6 md:flex-col md:items-stretch md:space-y-2
       "
     >
-      Profile
-    </a>
+      <a
+        routerLink="/settings/profile"
+        routerLinkActive="bg-gray-100 text-gray-900"
+        class="
+          rounded-lg px-3 py-2 text-sm text-gray-700
+          hover:bg-gray-50
+          md:block
+        "
+      >
+        Profile
+      </a>
 
-    <a
-      routerLink="/settings/notifications"
-      routerLinkActive="bg-gray-100 text-gray-900"
-      class="
-        rounded-lg px-3 py-2 text-sm text-gray-700
-        hover:bg-gray-50
-        md:block
-      "
-    >
-      Notifications
-    </a>
-  </nav>
+      <a
+        routerLink="/settings/notifications"
+        routerLinkActive="bg-gray-100 text-gray-900"
+        class="
+          rounded-lg px-3 py-2 text-sm text-gray-700
+          hover:bg-gray-50
+          md:block
+        "
+      >
+        Notifications
+      </a>
+    </nav>
+</div>
 </aside>
