@@ -3,3 +3,88 @@
 @import "tailwindcss";
 @import "primeicons/primeicons.css";
 
+/* ✅ CSS VARIABLES FOR THEME MANAGEMENT */
+:root {
+  --primary-color: #3b82f6;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  
+  --surface-0: #ffffff;
+  --surface-50: #f9fafb;
+  --surface-100: #f3f4f6;
+  --surface-200: #e5e7eb;
+  --surface-800: #1f2937;
+  --surface-900: #111827;
+  --text-color: #111827;
+  --text-color-secondary: #6b7280;
+}
+
+[data-theme="dark"] {
+  --surface-0: #111827;
+  --surface-50: #1f2937;
+  --surface-100: #374151;
+  --surface-200: #4b5563;
+  --surface-800: #f3f4f6;
+  --surface-900: #ffffff;
+  --text-color: #f3f4f6;
+  --text-color-secondary: #9ca3af;
+}
+
+/* ✅ PRIME NG COMPONENT STYLING */
+.p-component {
+  color: var(--text-color);
+  background: var(--surface-0);
+}
+
+.p-button {
+  background: var(--primary-600);
+  color: white;
+  border-color: var(--primary-600);
+}
+
+.p-button:hover {
+  background: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+.p-inputtext,
+.p-dropdown,
+.p-select,
+.p-selectbutton .p-button {
+  background: var(--surface-0);
+  border-color: var(--surface-200);
+  color: var(--text-color);
+}
+
+.p-inputtext:focus,
+.p-dropdown.p-focus,
+.p-select.p-focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.p-togglebutton.p-highlight {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+}
+
+.p-card {
+  background: var(--surface-0);
+  border-color: var(--surface-200);
+  color: var(--text-color);
+}
+
+/* ✅ Tailwind integration */
+.bg-primary {
+  background-color: var(--primary-500) !important;
+}
+
+.text-primary {
+  color: var(--primary-500) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-500) !important;
+}
