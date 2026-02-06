@@ -14,7 +14,19 @@
             <!-- Body -->
             <div class="px-8 py-6">
             <!-- Section: Product Updates -->
-            <h2 class="text-sm font-semibold text-gray-900">Product Updates</h2>
+             <div class="flex flex-row w-full justify-between ">
+                <h2 class="text-sm font-semibold text-gray-900">Product Updates</h2>
+                <div class="flex items-center">
+                <p-checkbox
+                    [binary]="true"
+                    [ngModel]="productUpdatesAllSelected()"
+                    (ngModelChange)="toggleAllProductUpdates()"
+                    [indeterminate]="productUpdatesSomeSelected() && !productUpdatesAllSelected()"
+                    class="mr-2"
+                ></p-checkbox>
+                <label class="text-sm font-medium text-gray-700">Select all</label>
+            </div>
+            </div>
 
             <div class="mt-4 divide-y divide-gray-200">
                 <app-notification-card
@@ -37,7 +49,20 @@
             </div>
 
             <!-- Section: Security -->
-            <h2 class="mt-10 text-sm font-semibold text-gray-900">Security</h2>
+            <div class="flex flex-row w-full justify-between ">
+                <h2 class="mt-10 text-sm font-semibold text-gray-900">Security</h2>
+
+                <div class="flex items-center mt-4">
+                <p-checkbox
+                    [binary]="true"
+                    [ngModel]="securityAllSelected()"
+                    (ngModelChange)="toggleAllSecurity()"
+                    [indeterminate]="securitySomeSelected() && !securityAllSelected()"
+                    class="mr-2"
+                ></p-checkbox>
+                <label class="text-sm font-medium text-gray-700">Select all</label>
+                </div>
+            </div>
 
             <div class="mt-4 divide-y divide-gray-200">
                 <app-notification-card
@@ -52,8 +77,20 @@
                 [(enabled)]="loginNotifications"
                 ></app-notification-card>
             </div>
+            <div class="flex flex-row w-full justify-between ">
+                <h2 class="mt-10 text-sm font-semibold text-gray-900">Marketing</h2>
 
-            <h2 class="mt-10 text-sm font-semibold text-gray-900">Marketing</h2>
+                <div class="flex items-center mt-4">
+                <p-checkbox
+                    [binary]="true"
+                    [ngModel]="marketingAllSelected()"
+                    (ngModelChange)="toggleAllMarketing()"
+                    [indeterminate]="marketingSomeSelected() && !marketingAllSelected()"
+                    class="mr-2"
+                ></p-checkbox>
+                <label class="text-sm font-medium text-gray-700">Select all</label>
+                </div>
+            </div>
 
             <div class="mt-4 divide-y divide-gray-200">
                 <app-notification-card
