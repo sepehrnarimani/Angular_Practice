@@ -1,13 +1,25 @@
 <div class="pr-16">
   <label class="block text-sm font-medium text-gray-700">
     {{ label() }}
+    @if (required()) { <span class="text-red-500">*</span> }
   </label>
 
   <input
-    [type]="type()"
+    pInputText
+    [type]="email() ? 'email' : type()"
     [value]="value()"
+    (input)="onInput($event)"
     [placeholder]="placeholder()"
-    class="mt-1 mb-4 w-full rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-900
+    class="mt-1 w-full rounded-lg border px-4 py-2 text-sm text-gray-900
            outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+    [class.mb-4]="!hasError"
+    [class.border-red-500]="hasError"
+    [class.border-gray-300]="!hasError"
   />
+
+  @if (showRequiredError) {
+    <small class="text-red-500 text-xs mb-4 block">this field is required</small>
+  } @else if (isEmailInvalid) {
+    <small class="text-red-500 text-xs mt-4 block">invalid email address</small>
+  }
 </div>

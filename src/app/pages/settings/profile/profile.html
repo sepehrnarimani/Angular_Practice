@@ -17,21 +17,58 @@
         <app-profile-entry
           label="First Name"
           placeholder="John"
-          value="John"
+          [(value)]="firstName"
+          [required]="true"
         ></app-profile-entry>
 
         <app-profile-entry
           label="Last Name"
           placeholder="Doe"
-          value="Doe"
+          [(value)]="lastName"
+          [required]="true"
         ></app-profile-entry>
 
         <app-profile-entry
           label="Email"
           type="email"
           placeholder="john.doe@company.com"
-          value="john.doe@company.com"
+          [(value)]="email"
+          [email]="true"
         ></app-profile-entry>
+
+        <div class="pr-16">
+
+          <label class="block text-sm font-medium text-gray-700">
+            TimeZone
+          </label>
+
+          <p-select
+            [options]="timezones"
+            [(ngModel)]="selectedTimezone"
+            name="timezone"
+            placeholder="Select a timezone"
+            class="mt-1 w-full p-select-custom"
+            [style]="{ width: '100%' }"
+          ></p-select> 
+        </div>
+
+        <div class="flex items-center">
+            <p-checkbox
+              [binary]="true"
+              [ngModel]="isVisible()"
+              (ngModelChange)="isVisible.set($event)"
+              class="w-full p-checkbox-custom"
+              [inputId]="'profile-visibility'"
+            >  
+            </p-checkbox>
+            <label 
+                class="ml-2 text-gray-700 font-medium text-sm"
+                [htmlFor]="'profile-visibility'"
+              >
+                Make my profile visible to teammates
+              </label>
+          </div>
+
       </form>
     </div>
 
