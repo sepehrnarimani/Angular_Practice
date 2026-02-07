@@ -102,33 +102,25 @@ export class ThemeService {
     
     // Set CSS variables
     root.style.setProperty('--primary-color', current[600]);
-    root.style.setProperty('--primary-500', current[100]);
-    root.style.setProperty('--primary-500', current[200]);
-    root.style.setProperty('--primary-600', current[300]);
-    root.style.setProperty('--primary-700', current[400]);
+    root.style.setProperty('--primary-100', current[100]);
+    root.style.setProperty('--primary-200', current[200]);
+    root.style.setProperty('--primary-300', current[300]);
+    root.style.setProperty('--primary-400', current[400]);
     root.style.setProperty('--primary-500', current[500]);
     root.style.setProperty('--primary-600', current[600]);
     root.style.setProperty('--primary-700', current[700]);
     
     // Dark/light mode variables
     if (isDark) {
-      root.style.setProperty('--surface-0', '#111827');
-      root.style.setProperty('--surface-50', '#1f2937');
-      root.style.setProperty('--surface-100', '#374151');
-      root.style.setProperty('--surface-200', '#4b5563');
-      root.style.setProperty('--surface-800', '#f3f4f6');
-      root.style.setProperty('--surface-900', '#ffffff');
-      root.style.setProperty('--text-color', '#f3f4f6');
-      root.style.setProperty('--text-color-secondary', '#9ca3af');
+      root.style.setProperty('--surface-1', '#1F1F1F');
+      root.style.setProperty('--surface-2', '#2A2A2A');
+      root.style.setProperty('--text-color', '#ffffff');
+      root.style.setProperty('--text-color-secondary', '#A1A186');
     } else {
-      root.style.setProperty('--surface-0', '#ffffff');
-      root.style.setProperty('--surface-50', '#f9fafb');
-      root.style.setProperty('--surface-100', '#f3f4f6');
-      root.style.setProperty('--surface-200', '#e5e7eb');
-      root.style.setProperty('--surface-800', '#1f2937');
-      root.style.setProperty('--surface-900', '#111827');
-      root.style.setProperty('--text-color', '#111827');
-      root.style.setProperty('--text-color-secondary', '#6b7280');
+      root.style.setProperty('--surface-1', '#f3f4f6');
+      root.style.setProperty('--surface-2', '#ffffff');
+      root.style.setProperty('--text-color', '#000000');
+      root.style.setProperty('--text-color-secondary', '#6a7282');
     }
   }
 

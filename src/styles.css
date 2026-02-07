@@ -10,25 +10,17 @@
   --primary-600: #2563eb;
   --primary-700: #1d4ed8;
   
-  --surface-0: #ffffff;
-  --surface-50: #f9fafb;
-  --surface-100: #f3f4f6;
-  --surface-200: #e5e7eb;
-  --surface-800: #1f2937;
-  --surface-900: #111827;
-  --text-color: #111827;
-  --text-color-secondary: #6b7280;
+  --surface-1: #f3f4f6;
+  --surface-2: #ffffff;
+  --text-color: #000000;
+  --text-color-secondary: #6a7282;
 }
 
 [data-theme="dark"] {
-  --surface-0: #111827;
-  --surface-50: #1f2937;
-  --surface-100: #374151;
-  --surface-200: #4b5563;
-  --surface-800: #f3f4f6;
-  --surface-900: #ffffff;
-  --text-color: #f3f4f6;
-  --text-color-secondary: #9ca3af;
+  --surface-1: #1F1F1F;
+  --surface-2: #2A2A2A;
+  --text-color: #ffffff;
+  --text-color-secondary: #A1A186;
 }
 
 /* ✅ PRIME NG COMPONENT STYLING */
