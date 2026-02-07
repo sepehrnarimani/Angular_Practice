@@ -32,7 +32,7 @@
             <h2 class="text-sm font-semibold text-gray-900 mb-3">Primary color</h2>
             <p class="text-xs text-gray-500 mb-4">Choose your preferred accent color for buttons and highlights</p>
             
-            <div class="grid grid-cols-5 gap-3">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 py-2 px-3">
               @for (color of primaryColors(); track color.value) {
                 <p-button
                   [label]="color.label"
