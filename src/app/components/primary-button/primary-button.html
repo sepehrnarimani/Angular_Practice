@@ -1,4 +1,16 @@
-<button
+@if (usePrimaryColor()) {
+  <button
+  type="button"
+  (click)="navigate()"
+  class= "rounded-lg px-6 py-3 text-base bg-(--primary-600) font-normal text-white shadow-sm transition cursor-pointer hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-(primary-700)
+    hover:translate-0.5
+    hover:shadow-md"
+>
+  {{ text() }}
+</button>
+}
+@else {
+    <button
   type="button"
   (click)="navigate()"
   class= "rounded-lg px-6 py-3 text-base bg-blue-600 font-normal text-white shadow-sm transition cursor-pointer hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-blue-800
@@ -7,3 +19,5 @@
 >
   {{ text() }}
 </button>
+}
+

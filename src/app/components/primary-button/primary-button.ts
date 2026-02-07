@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PrimaryButtonComponent {
   text = input('');
+  usePrimaryColor = input<boolean>(true)
   route = input<string | undefined>(undefined);
 
   constructor(private router: Router) {}

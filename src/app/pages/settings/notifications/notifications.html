@@ -22,7 +22,11 @@
                     [ngModel]="productUpdatesAllSelected()"
                     (ngModelChange)="toggleAllProductUpdates()"
                     [indeterminate]="productUpdatesSomeSelected() && !productUpdatesAllSelected()"
-                    class="mr-2"
+                    class="
+                    mr-2
+                    [--p-checkbox-checked-background:var(--primary-600)]
+                    [--p-checkbox-checked-hover-background:var(--primary-700)]
+                    "
                 ></p-checkbox>
                 <label class="text-sm font-medium text-gray-700">Select all</label>
             </div>
@@ -58,7 +62,11 @@
                     [ngModel]="securityAllSelected()"
                     (ngModelChange)="toggleAllSecurity()"
                     [indeterminate]="securitySomeSelected() && !securityAllSelected()"
-                    class="mr-2"
+                    class="
+                    mr-2
+                    [--p-checkbox-checked-background:var(--primary-600)]
+                    [--p-checkbox-checked-hover-background:var(--primary-700)]
+                    "
                 ></p-checkbox>
                 <label class="text-sm font-medium text-gray-700">Select all</label>
                 </div>
@@ -86,7 +94,11 @@
                     [ngModel]="marketingAllSelected()"
                     (ngModelChange)="toggleAllMarketing()"
                     [indeterminate]="marketingSomeSelected() && !marketingAllSelected()"
-                    class="mr-2"
+                    class="
+                    mr-2
+                    [--p-checkbox-checked-background:var(--primary-600)]
+                    [--p-checkbox-checked-hover-background:var(--primary-700)]
+                    "
                 ></p-checkbox>
                 <label class="text-sm font-medium text-gray-700">Select all</label>
                 </div>

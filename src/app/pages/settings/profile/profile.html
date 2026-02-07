@@ -47,7 +47,12 @@
             [(ngModel)]="selectedTimezone"
             name="timezone"
             placeholder="Select a timezone"
-            class="mt-1 w-full p-select-custom"
+            class="mt-1 w-full [--p-select-hover-border-color:var(--primary-700)]
+              [--p-select-border-color: var(--primary-600)]
+              [--p-select-filled-background:var(--primary-600)]
+              [--p-select-focus-border-color:var(--primary-600)]
+              [--p-select-option-selected-background:var(--primary-500)]
+              [--p-select-option-selected-focus-background:var(--primary-500)]"
             [style]="{ width: '100%' }"
           ></p-select> 
         </div>
@@ -57,7 +62,8 @@
               [binary]="true"
               [ngModel]="isVisible()"
               (ngModelChange)="isVisible.set($event)"
-              class="w-full p-checkbox-custom"
+              class="w-full [--p-checkbox-checked-background:var(--primary-600)]
+                    [--p-checkbox-checked-hover-background:var(--primary-700)]"
               [inputId]="'profile-visibility'"
             >  
             </p-checkbox>

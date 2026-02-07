@@ -46,17 +46,66 @@ export class ThemeService {
     
     // Color mappings
     const colors = {
-      blue: { 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' },
-      purple: { 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9' },
-      green: { 500: '#10b981', 600: '#059669', 700: '#047857' },
-      orange: { 500: '#f97316', 600: '#ea580c', 700: '#c2410c' },
-      red: { 500: '#ef4444', 600: '#dc2626', 700: '#b91c1c' }
+      blue: {
+    100: '#dbeafe',
+    200: '#bfdbfe',
+    300: '#93c5fd',
+    400: '#60a5fa',
+    500: '#3b82f6',
+    600: '#2563eb',
+    700: '#1d4ed8',
+    800: '#1e40af'
+  },
+  purple: {
+    100: '#ede9fe',
+    200: '#ddd6fe',
+    300: '#c4b5fd',
+    400: '#a78bfa',
+    500: '#8b5cf6',
+    600: '#7c3aed',
+    700: '#6d28d9',
+    800: '#5b21b6'
+  },
+  green: {
+    100: '#dcfce7',
+    200: '#bbf7d0',
+    300: '#86efac',
+    400: '#4ade80',
+    500: '#10b981',
+    600: '#059669',
+    700: '#047857',
+    800: '#065f46'
+    },
+  orange: {
+    100: '#ffedd5',
+    200: '#fed7aa',
+    300: '#fdba74',
+    400: '#fb923c',
+    500: '#f97316',
+    600: '#ea580c',
+    700: '#c2410c',
+    800: '#9a3412'
+  },
+  red: {
+    100: '#fee2e2',
+    200: '#fecaca',
+    300: '#fca5a5',
+    400: '#f87171',
+    500: '#ef4444',
+    600: '#dc2626',
+    700: '#b91c1c',
+    800: '#991b1b'
+  }
     };
     
     const current = colors[color];
     
     // Set CSS variables
     root.style.setProperty('--primary-color', current[600]);
+    root.style.setProperty('--primary-500', current[100]);
+    root.style.setProperty('--primary-500', current[200]);
+    root.style.setProperty('--primary-600', current[300]);
+    root.style.setProperty('--primary-700', current[400]);
     root.style.setProperty('--primary-500', current[500]);
     root.style.setProperty('--primary-600', current[600]);
     root.style.setProperty('--primary-700', current[700]);
